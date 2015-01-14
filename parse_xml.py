@@ -43,7 +43,7 @@ def mapping1():
         json_data = json.load(json_file)
         print(json_data)
         try:
-            es_map = es.post('cybox/_mapping/data1',data=json_data)
+            es_map = es.put('cybox/data1/_mapping',data=json_data)
             print es_map
         except Exception, e:
             print e        
@@ -56,7 +56,7 @@ def mapping2():
         json_data = json.load(json_file)
         print(json_data)
         try:
-            es_map = es.post('cybox/_mapping/data2',data=json_data)
+            es_map = es.put('cybox/data2/_mapping',data=json_data)
             print es_map
         except Exception, e:
             print e        
@@ -69,7 +69,7 @@ def mapping3():
         json_data = json.load(json_file)
         print(json_data)
         try:
-            es_map = es.post('cybox/_mapping/data3',data=json_data)
+            es_map = es.post('cybox/data3/_mapping',data=json_data)
             print es_map
         except Exception, e:
             print e        
